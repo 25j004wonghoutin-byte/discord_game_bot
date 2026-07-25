@@ -22,13 +22,11 @@ class DiscordNotifyError(RuntimeError):
 def build_message(reminder: Reminder) -> str:
     event = reminder.event
     end_time = event.end_time.isoformat()
-    source = f"\nSource: {event.source_url}" if event.source_url else ""
     return (
         f"[{reminder.threshold} reminder] {event.game} ({event.server})\n"
         f"Event: {event.event_name}\n"
         f"Ends: {end_time}\n"
         f"Remaining: about {format_remaining(reminder.remaining)}"
-        f"{source}"
     )
 
 
