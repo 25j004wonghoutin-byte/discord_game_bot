@@ -56,7 +56,8 @@ def send_discord_message(
                 retry_after = _retry_after_seconds(exc)
                 time.sleep(retry_after)
                 continue
-            raise DiscordNotifyError(f"Discord returned HTTP {exc.code}.") from exc
+            detail = _safe_response_detail(exc)
+            raise DiscordNotifyError(f"Discord returned HTTP {exc.code}.{detail}") from exc
         except URLError as exc:
             if attempt >= max_retries:
                 raise DiscordNotifyError(f"Discord request failed after retries: {exc}") from exc
@@ -83,3 +84,16 @@ def _retry_after_seconds(response: HTTPError | HTTPResponse) -> float:
         return min(max(float(value), 0.5), 10)
     except (TypeError, ValueError):
         return 1
+
+
+def _safe_response_detail(response: HTTPError) -> str:
+    try:
+        body = response.read().decode("utf-8", errors="replace")
+    except OSError:
+        return ""
+
+    compact = " ".join(body.split())
+    if not compact:
+        return ""
+
+    return f" Response: {compact[:500]}"
