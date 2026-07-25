@@ -25,6 +25,18 @@ Preview due reminders without sending Discord messages:
 .\.venv\Scripts\python.exe -m src.main --dry-run
 ```
 
+Validate event data and notification state without requiring a webhook:
+
+```powershell
+.\.venv\Scripts\python.exe -m src.main --validate-only
+```
+
+Simulate a dry run at a specific time:
+
+```powershell
+.\.venv\Scripts\python.exe -m src.main --dry-run --now 2026-07-28T04:00:00+09:00
+```
+
 Send due reminders:
 
 ```powershell
