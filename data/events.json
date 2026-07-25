@@ -1,5 +1,16 @@
 [
   {
+    "id": "manual-discord-test-2026-07-25-2120-jst",
+    "game": "System Test",
+    "server": "Test",
+    "event_name": "Discord notification workflow test",
+    "start_time": "2026-07-25T16:15:00+09:00",
+    "end_time": "2026-07-25T21:20:00+09:00",
+    "source_url": "https://github.com/25j004wonghoutin-byte/discord_game_bot",
+    "enabled": true,
+    "notes": "Temporary event for confirming GitHub Actions to Discord notification delivery. Remove after verification."
+  },
+  {
     "id": "nte-asia-jp-999-nights-2026-07",
     "game": "NTE 異環",
     "server": "Asia-Japan",
