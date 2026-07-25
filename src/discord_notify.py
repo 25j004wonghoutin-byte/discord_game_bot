@@ -43,7 +43,10 @@ def send_discord_message(
     request = Request(
         webhook_url,
         data=payload,
-        headers={"Content-Type": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": "game-event-discord-bot/1.0",
+        },
         method="POST",
     )
 
