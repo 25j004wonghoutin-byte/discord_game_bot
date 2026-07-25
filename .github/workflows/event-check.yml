@@ -1,0 +1,86 @@
+name: Event Check
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: game-event-reminder
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    env:
+      EVENTS_FILE: data/events.json
+      STATE_FILE: ${{ runner.temp }}/notification-state/notification_state.json
+      LOG_LEVEL: INFO
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run tests
+        run: python -m unittest discover -s tests
+
+      - name: Prepare notification state branch
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          state_dir="${RUNNER_TEMP}/notification-state"
+
+          if git ls-remote --exit-code --heads origin notification-state >/dev/null 2>&1; then
+            git fetch origin notification-state
+            git worktree add "${state_dir}" FETCH_HEAD
+          else
+            git worktree add --detach "${state_dir}"
+            cd "${state_dir}"
+            git checkout --orphan notification-state
+            git rm -rf . >/dev/null 2>&1 || true
+            printf '{}\n' > notification_state.json
+            git add notification_state.json
+            git commit -m "Initialize notification state"
+            git push origin HEAD:notification-state
+          fi
+
+          mkdir -p "${state_dir}"
+          if [ ! -f "${state_dir}/notification_state.json" ]; then
+            printf '{}\n' > "${state_dir}/notification_state.json"
+          fi
+
+      - name: Send due reminders
+        run: python -m src.main
+
+      - name: Persist notification state
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          state_dir="${RUNNER_TEMP}/notification-state"
+          cd "${state_dir}"
+
+          git add notification_state.json
+          if git diff --cached --quiet; then
+            echo "No notification state changes."
+            exit 0
+          fi
+
+          git commit -m "Update notification state"
+          git push origin HEAD:notification-state

@@ -67,3 +67,34 @@ All event times must include a UTC offset. The event `id` should stay stable eve
 `data/notification_state.json` works for local runs, but GitHub-hosted runners do not preserve local files across scheduled executions. Before enabling hourly GitHub Actions, choose a persistent state strategy such as a dedicated state branch or an external KV store.
 
 The included `CI` workflow only runs tests and dry-run checks. It does not send Discord messages.
+
+## GitHub Actions Reminder Workflow
+
+The `Event Check` workflow runs every hour at minute 17 UTC and can also be triggered manually from GitHub Actions.
+
+Required repository setup:
+
+1. Add a repository secret named `DISCORD_WEBHOOK_URL`.
+2. Set Actions workflow permissions to `Read and write permissions`.
+3. Keep the default branch as `main`.
+
+The workflow uses a dedicated `notification-state` branch to persist sent reminders. On the first run, it creates that branch automatically with an initialization commit containing:
+
+```text
+notification_state.json
+```
+
+After each successful Discord send, the app updates that state file. Once the state branch exists, runs with no new reminders do not create state commits.
+
+The workflow uses:
+
+```yaml
+permissions:
+  contents: write
+
+concurrency:
+  group: game-event-reminder
+  cancel-in-progress: false
+```
+
+`contents: write` is only needed so the workflow can commit `notification_state.json` to the `notification-state` branch. `concurrency` prevents overlapping scheduled runs from sending duplicate reminders.
