@@ -3,11 +3,12 @@ from __future__ import annotations
 import time
 import json
 from dataclasses import dataclass
+from datetime import timedelta
 from http.client import HTTPResponse
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from .event_checker import Reminder, format_remaining
+from .event_checker import Reminder
 
 
 @dataclass(frozen=True)
@@ -21,12 +22,13 @@ class DiscordNotifyError(RuntimeError):
 
 def build_message(reminder: Reminder) -> str:
     event = reminder.event
-    end_time = event.end_time.isoformat()
+    end_time = event.end_time.strftime("%m/%d %H:%M")
+    timezone = _timezone_label(event.end_time)
     return (
-        f"[{reminder.threshold} reminder] {event.game} ({event.server})\n"
-        f"Event: {event.event_name}\n"
-        f"Ends: {end_time}\n"
-        f"Remaining: about {format_remaining(reminder.remaining)}"
+        f"[活動結束提醒] {event.game} ({event.server})\n"
+        f"活動: {event.event_name}\n"
+        f"終了時間: {end_time} [{timezone}]\n"
+        f"提醒: 距離結束還有 {_format_remaining_zh(reminder.remaining)}"
     )
 
 
@@ -85,6 +87,29 @@ def _retry_after_seconds(response: HTTPError | HTTPResponse) -> float:
         return min(max(float(value), 0.5), 10)
     except (TypeError, ValueError):
         return 1
+
+
+def _format_remaining_zh(remaining: timedelta) -> str:
+    total_minutes = max(0, int(remaining.total_seconds() // 60))
+    hours, minutes = divmod(total_minutes, 60)
+    return f"{hours:02d}時間{minutes:02d}分"
+
+
+def _timezone_label(end_time) -> str:
+    offset = end_time.utcoffset()
+    if offset is None:
+        return "UTC unknown"
+
+    total_minutes = int(offset.total_seconds() // 60)
+    if total_minutes == 540:
+        return "JST"
+    if total_minutes == 0:
+        return "UTC"
+
+    sign = "+" if total_minutes >= 0 else "-"
+    absolute_minutes = abs(total_minutes)
+    hours, minutes = divmod(absolute_minutes, 60)
+    return f"UTC{sign}{hours:02d}:{minutes:02d}"
 
 
 def _safe_response_detail(response: HTTPError) -> str:

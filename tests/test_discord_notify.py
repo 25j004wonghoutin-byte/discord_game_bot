@@ -24,20 +24,27 @@ class DiscordNotifyTests(unittest.TestCase):
         self.assertEqual(result.status_code, 204)
         self.assertEqual(request.get_header("User-agent"), "game-event-discord-bot/1.0")
 
-    def test_message_does_not_include_source_url(self):
+    def test_message_uses_localized_reminder_format_without_source_url(self):
         event = Event(
             id="event-1",
-            game="Game",
-            server="JP",
-            event_name="Event",
+            game="System Test",
+            server="Test",
+            event_name="Discord notification workflow test",
             end_time=datetime.fromisoformat("2026-07-25T21:20:00+09:00"),
             enabled=True,
             source_url="https://example.com/source",
         )
-        reminder = Reminder(event=event, threshold="6h", remaining=timedelta(hours=5))
+        reminder = Reminder(event=event, threshold="6h", remaining=timedelta(hours=5, minutes=4))
 
         message = build_message(reminder)
 
+        self.assertEqual(
+            message,
+            "[活動結束提醒] System Test (Test)\n"
+            "活動: Discord notification workflow test\n"
+            "終了時間: 07/25 21:20 [JST]\n"
+            "提醒: 距離結束還有 05時間04分",
+        )
         self.assertNotIn("Source:", message)
         self.assertNotIn("https://example.com/source", message)
 
