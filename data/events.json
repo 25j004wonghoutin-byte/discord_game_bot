@@ -1,13 +1,168 @@
 [
   {
-    "id": "blue-archive-jp-sample-2026-07",
-    "game": "ブルーアーカイブ",
-    "server": "JP",
-    "event_name": "Sample event",
-    "start_time": "2026-07-01T11:00:00+09:00",
-    "end_time": "2026-07-29T03:59:00+09:00",
-    "source_url": "https://example.com/official-announcement",
-    "enabled": false,
-    "notes": "Replace this disabled sample with official event data."
+    "id": "nte-asia-jp-999-nights-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "九百九十九夜",
+    "end_time": "2026-08-19T06:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-neon-tears-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "ネオンが裂ける時",
+    "end_time": "2026-08-19T06:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-7days-bonus-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "7Daysボーナス",
+    "end_time": "2026-08-19T06:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-tsuyogari-gift-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "強がりギフト",
+    "end_time": "2026-07-29T06:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-open-commemoration-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "オープン記念",
+    "end_time": "2026-07-29T06:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-summer-present-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "サマープレゼント",
+    "end_time": "2026-08-19T06:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-kageoni-gokko-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "影鬼ごっこ",
+    "start_time": "2026-07-17T11:00:00+09:00",
+    "end_time": "2026-08-19T06:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-avon-partner-plan-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "エイボンパートナー計画",
+    "end_time": "2026-08-19T06:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "GameWith detailed section listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-avon-partner-action-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "エイボンパートナーアクション",
+    "end_time": "2026-08-19T06:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "GameWith detailed section listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-raid-daisakusen-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "略奪大作戦",
+    "start_time": "2026-07-20T05:00:00+09:00",
+    "end_time": "2026-08-03T04:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-orbital-outside-current-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "軌道外領域",
+    "end_time": "2026-07-30T04:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "GameWith did not list a precise start time for this開催中 entry. Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-orbital-outside-2026-07-30",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "軌道外領域",
+    "end_time": "2026-08-13T04:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "GameWith listed start date as 7月30日 without a precise time; start_time omitted. Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-pixel-overflow-2026-08",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "ピクセル・オーバーフロー",
+    "start_time": "2026-08-06T05:00:00+09:00",
+    "end_time": "2026-08-13T04:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-fishing-daisakusen-2026-08",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "爆釣大作戦",
+    "start_time": "2026-08-03T05:00:00+09:00",
+    "end_time": "2026-08-17T04:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-warren-memory-2026-08",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "ウォーレン・メモリー",
+    "start_time": "2026-08-06T11:00:00+09:00",
+    "end_time": "2026-08-19T06:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "nte-asia-jp-fan-slash-2026-07",
+    "game": "NTE 異環",
+    "server": "Asia-Japan",
+    "event_name": "ファンスラッシュ",
+    "start_time": "2026-07-28T11:00:00+09:00",
+    "end_time": "2026-08-19T06:59:00+09:00",
+    "source_url": "https://gamewith.jp/nte/559568",
+    "enabled": true,
+    "notes": "Times are treated as JST (+09:00)."
   }
 ]
