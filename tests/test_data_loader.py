@@ -36,6 +36,12 @@ class DataLoaderTests(unittest.TestCase):
         self.assertEqual(events[0].id, "event-1")
         self.assertIsNotNone(events[0].end_time.utcoffset())
 
+    def test_loads_webhook_key(self):
+        with mock.patch("pathlib.Path.read_text", return_value=json.dumps([valid_event(webhook_key="NTE")])):
+            events = load_events(__import__("pathlib").Path("events.json"))
+
+        self.assertEqual(events[0].webhook_key, "NTE")
+
     def test_rejects_duplicate_ids(self):
         with mock.patch("pathlib.Path.read_text", return_value=json.dumps([valid_event(), valid_event()])):
             with self.assertRaisesRegex(EventDataError, "Duplicate event id"):

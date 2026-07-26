@@ -17,6 +17,7 @@ class Event:
     enabled: bool
     start_time: datetime | None = None
     source_url: str | None = None
+    webhook_key: str | None = None
     notes: str | None = None
 
 
@@ -69,6 +70,7 @@ def load_events(path: Path) -> list[Event]:
                 start_time=start_time,
                 end_time=end_time,
                 source_url=_optional_str(item, "source_url", event_id),
+                webhook_key=_optional_str(item, "webhook_key", event_id),
                 enabled=enabled,
                 notes=_optional_str(item, "notes", event_id),
             )

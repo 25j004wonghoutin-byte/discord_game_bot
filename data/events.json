@@ -7,6 +7,7 @@
     "start_time": "2026-07-25T16:50:00+09:00",
     "end_time": "2026-07-25T22:00:00+09:00",
     "source_url": "https://github.com/25j004wonghoutin-byte/discord_game_bot",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "Temporary event for confirming GitHub Actions to Discord notification delivery. Remove after verification."
   },
@@ -17,6 +18,7 @@
     "event_name": "九百九十九夜",
     "end_time": "2026-08-19T06:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
   },
@@ -27,6 +29,7 @@
     "event_name": "ネオンが裂ける時",
     "end_time": "2026-08-19T06:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
   },
@@ -37,6 +40,7 @@
     "event_name": "7Daysボーナス",
     "end_time": "2026-08-19T06:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
   },
@@ -47,6 +51,7 @@
     "event_name": "強がりギフト",
     "end_time": "2026-07-29T06:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
   },
@@ -57,6 +62,7 @@
     "event_name": "オープン記念",
     "end_time": "2026-07-29T06:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
   },
@@ -67,6 +73,7 @@
     "event_name": "サマープレゼント",
     "end_time": "2026-08-19T06:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "GameWith listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
   },
@@ -78,6 +85,7 @@
     "start_time": "2026-07-17T11:00:00+09:00",
     "end_time": "2026-08-19T06:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "Times are treated as JST (+09:00)."
   },
@@ -88,6 +96,7 @@
     "event_name": "エイボンパートナー計画",
     "end_time": "2026-08-19T06:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "GameWith detailed section listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
   },
@@ -98,6 +107,7 @@
     "event_name": "エイボンパートナーアクション",
     "end_time": "2026-08-19T06:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "GameWith detailed section listed start as 7月8日 メンテ後; exact start time omitted. Times are treated as JST (+09:00)."
   },
@@ -109,6 +119,7 @@
     "start_time": "2026-07-20T05:00:00+09:00",
     "end_time": "2026-08-03T04:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "Times are treated as JST (+09:00)."
   },
@@ -119,6 +130,7 @@
     "event_name": "軌道外領域",
     "end_time": "2026-07-30T04:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "GameWith did not list a precise start time for this開催中 entry. Times are treated as JST (+09:00)."
   },
@@ -129,6 +141,7 @@
     "event_name": "軌道外領域",
     "end_time": "2026-08-13T04:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "GameWith listed start date as 7月30日 without a precise time; start_time omitted. Times are treated as JST (+09:00)."
   },
@@ -140,6 +153,7 @@
     "start_time": "2026-08-06T05:00:00+09:00",
     "end_time": "2026-08-13T04:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "Times are treated as JST (+09:00)."
   },
@@ -151,6 +165,7 @@
     "start_time": "2026-08-03T05:00:00+09:00",
     "end_time": "2026-08-17T04:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "Times are treated as JST (+09:00)."
   },
@@ -162,6 +177,7 @@
     "start_time": "2026-08-06T11:00:00+09:00",
     "end_time": "2026-08-19T06:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "Times are treated as JST (+09:00)."
   },
@@ -173,6 +189,7 @@
     "start_time": "2026-07-28T11:00:00+09:00",
     "end_time": "2026-08-19T06:59:00+09:00",
     "source_url": "https://gamewith.jp/nte/559568",
+    "webhook_key": "NTE",
     "enabled": true,
     "notes": "Times are treated as JST (+09:00)."
   }

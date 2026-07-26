@@ -8,10 +8,19 @@ The first version uses manually maintained JSON data, local notification state, 
 
 1. Create or refresh the local virtual environment.
 2. Copy `.env.example` to `.env`.
-3. Set `DISCORD_WEBHOOK_URL` in `.env`.
+3. Set the Discord webhook URLs you need in `.env`.
 4. Replace the disabled sample in `data/events.json` with official event data.
 
 Do not commit `.env` or real webhook URLs.
+
+Supported webhook keys:
+
+```text
+NTE -> DISCORD_WEBHOOK_URL_NTE
+BA  -> DISCORD_WEBHOOK_URL_BA
+HSR -> DISCORD_WEBHOOK_URL_HSR
+GBF -> DISCORD_WEBHOOK_URL_GBF
+```
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests
@@ -60,6 +69,7 @@ Run tests:
   "start_time": "2026-07-01T11:00:00+09:00",
   "end_time": "2026-07-29T03:59:00+09:00",
   "source_url": "https://example.com/official-announcement",
+  "webhook_key": "NTE",
   "enabled": true,
   "notes": "Time verified against the official announcement."
 }
@@ -86,7 +96,15 @@ The `Event Check` workflow runs every hour at minute 17 UTC and can also be trig
 
 Required repository setup:
 
-1. Add a repository secret named `DISCORD_WEBHOOK_URL`.
+1. Add repository secrets for each game webhook:
+
+```text
+DISCORD_WEBHOOK_URL_NTE
+DISCORD_WEBHOOK_URL_BA
+DISCORD_WEBHOOK_URL_HSR
+DISCORD_WEBHOOK_URL_GBF
+```
+
 2. Set Actions workflow permissions to `Read and write permissions`.
 3. Keep the default branch as `main`.
 

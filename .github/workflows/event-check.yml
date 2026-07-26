@@ -19,7 +19,10 @@ jobs:
     env:
       EVENTS_FILE: data/events.json
       LOG_LEVEL: INFO
-      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      DISCORD_WEBHOOK_URL_NTE: ${{ secrets.DISCORD_WEBHOOK_URL_NTE }}
+      DISCORD_WEBHOOK_URL_BA: ${{ secrets.DISCORD_WEBHOOK_URL_BA }}
+      DISCORD_WEBHOOK_URL_HSR: ${{ secrets.DISCORD_WEBHOOK_URL_HSR }}
+      DISCORD_WEBHOOK_URL_GBF: ${{ secrets.DISCORD_WEBHOOK_URL_GBF }}
 
     steps:
       - name: Check out repository

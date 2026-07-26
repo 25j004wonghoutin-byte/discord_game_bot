@@ -43,9 +43,15 @@ def main(argv: list[str] | None = None) -> int:
                 print()
                 continue
 
-            assert config.discord_webhook_url is not None
-            result = send_discord_message(config.discord_webhook_url, message)
-            logging.info("Sent %s reminder for %s. Discord HTTP %s.", reminder.threshold, reminder.event.id, result.status_code)
+            webhook_url = config.get_webhook_url(reminder.event.webhook_key)
+            result = send_discord_message(webhook_url, message)
+            logging.info(
+                "Sent %s reminder for %s via webhook key %s. Discord HTTP %s.",
+                reminder.threshold,
+                reminder.event.id,
+                reminder.event.webhook_key or "DEFAULT",
+                result.status_code,
+            )
             state.mark_notified(reminder.event.id, reminder.threshold, now)
 
         if not config.dry_run:
