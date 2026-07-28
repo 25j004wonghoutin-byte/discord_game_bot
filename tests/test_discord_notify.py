@@ -43,7 +43,8 @@ class DiscordNotifyTests(unittest.TestCase):
             "[活動結束提醒] System Test (Test)\n"
             "活動: Discord notification workflow test\n"
             "終了時間: 07/25 21:20 [JST]\n"
-            "提醒: 距離結束還有 05時間04分",
+            "提醒: 距離結束還有 05時間04分\n"
+            "--------------------",
         )
         self.assertNotIn("Source:", message)
         self.assertNotIn("https://example.com/source", message)

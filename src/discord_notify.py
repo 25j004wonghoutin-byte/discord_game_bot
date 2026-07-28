@@ -28,7 +28,8 @@ def build_message(reminder: Reminder) -> str:
         f"[活動結束提醒] {event.game} ({event.server})\n"
         f"活動: {event.event_name}\n"
         f"終了時間: {end_time} [{timezone}]\n"
-        f"提醒: 距離結束還有 {_format_remaining_zh(reminder.remaining)}"
+        f"提醒: 距離結束還有 {_format_remaining_zh(reminder.remaining)}\n"
+        "--------------------"
     )
 
 
