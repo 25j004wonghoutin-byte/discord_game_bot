@@ -47,6 +47,60 @@
     "notes": "User-provided event time. Times are treated as JST (+09:00)."
   },
   {
+    "id": "ba-jp-tiphareth-elastic-2026-06",
+    "game": "Blue Archive",
+    "server": "日服",
+    "event_name": "制約解除決戦「ティファレト(弾力装甲)」",
+    "start_time": "2026-06-25T11:00:00+09:00",
+    "end_time": "2026-07-29T03:59:00+09:00",
+    "webhook_key": "BA",
+    "enabled": true,
+    "notes": "Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "ba-jp-schale-total-settlement-2026-07",
+    "game": "Blue Archive",
+    "server": "日服",
+    "event_name": "シャーレの総決算 with 連邦生徒会",
+    "start_time": "2026-07-22T11:00:00+09:00",
+    "end_time": "2026-07-29T10:59:00+09:00",
+    "webhook_key": "BA",
+    "enabled": true,
+    "notes": "Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "ba-jp-normal-drop-2x-2026-07",
+    "game": "Blue Archive",
+    "server": "日服",
+    "event_name": "任務(Normal)報酬2倍キャンペーン",
+    "start_time": "2026-07-22T04:00:00+09:00",
+    "end_time": "2026-07-29T03:59:00+09:00",
+    "webhook_key": "BA",
+    "enabled": true,
+    "notes": "Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "ba-jp-bounty-school-exchange-3x-2026-07",
+    "game": "Blue Archive",
+    "server": "日服",
+    "event_name": "指名手配・学園交流会 報酬3倍キャンペーン",
+    "start_time": "2026-07-29T04:00:00+09:00",
+    "end_time": "2026-08-05T03:59:00+09:00",
+    "webhook_key": "BA",
+    "enabled": true,
+    "notes": "Times are treated as JST (+09:00)."
+  },
+  {
+    "id": "ba-jp-makoto-chairman-summer-retreat-2026-07",
+    "game": "Blue Archive",
+    "server": "日服",
+    "event_name": "出航！万魔船 マコト議長の華麗なる避暑",
+    "end_time": "2026-08-12T10:59:00+09:00",
+    "webhook_key": "BA",
+    "enabled": true,
+    "notes": "Start is listed as 2026-07-29 メンテナンス後, so start_time is omitted. Times are treated as JST (+09:00)."
+  },
+  {
     "id": "nte-asia-jp-999-nights-2026-07",
     "game": "NTE 異環",
     "server": "Asia-Japan",
