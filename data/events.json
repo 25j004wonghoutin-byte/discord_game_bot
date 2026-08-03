@@ -47,6 +47,18 @@
     "notes": "User-provided event time. Times are treated as JST (+09:00)."
   },
   {
+    "id": "gbf-jp-fox-tail-summer-2026-07",
+    "game": "GBF",
+    "server": "Japan",
+    "event_name": "フォックステイル・サマー",
+    "start_time": "2026-07-29T19:00:00+09:00",
+    "end_time": "2026-08-06T20:59:00+09:00",
+    "source_url": "https://gamebiz.jp/news/430133",
+    "webhook_key": "GBF",
+    "enabled": true,
+    "notes": "Times are treated as JST (+09:00)."
+  },
+  {
     "id": "ba-jp-tiphareth-elastic-2026-06",
     "game": "Blue Archive",
     "server": "日服",
