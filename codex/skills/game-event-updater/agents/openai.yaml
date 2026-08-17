@@ -1,0 +1,7 @@
+﻿interface:
+  display_name: "Game Event Updater"
+  short_description: "Update game event reminders."
+  default_prompt: "Use $game-event-updater to update the Discord game event notification bot for all configured games."
+
+policy:
+  allow_implicit_invocation: true

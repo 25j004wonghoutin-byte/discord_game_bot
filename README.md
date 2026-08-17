@@ -4,6 +4,18 @@ Python-based MVP for sending Discord reminders before game events end.
 
 The first version uses manually maintained JSON data, local notification state, and Discord webhooks. It does not include crawlers, game login, databases, dashboards, or Discord bot tokens.
 
+## Moving to a New Windows Computer
+
+Use GitHub as the source of truth. The bot code, GitHub Actions schedules, portable Codex skill backup, and setup notes are stored in this repository.
+
+Start here:
+
+```text
+docs/new-computer-setup.md
+```
+
+GitHub Actions schedules continue to run from GitHub after changing computers, as long as repository secrets remain configured. Codex local automations are machine-local and must be recreated on the new computer using the backed-up prompt in `codex/automations/`.
+
 ## Setup
 
 1. Create or refresh the local virtual environment.
